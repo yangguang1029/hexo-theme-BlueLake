@@ -1,32 +1,11 @@
 /* syntax highlight*/
-pre 
-  width: 100%      
-  position: relative
-  border: none
-  padding: 0
-  margin: 0
-  code 
-    display block
-    box-sizing: border-box
-    overflow-x: auto
-    font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
-    margin: 1.2em 0
-    padding 15px 15px 10px 15px
-    line-height: 1.2em
-    width: 100%
-    border-radius: 5px
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125)
-    font-size: 13px
-    color: #333
-    background: #f7f8f8
 figure.highlight,.codeblock
   background: #f7f8f8
   margin: 10px 0
   line-height: 1.1em
+  color: #333
   padding-top: 15px
-  margin: 1em 0
-  border-radius: 5px
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125)
+  overflow: hidden
   figcaption
     font-size: 13px
     padding: 0 15px 20px
@@ -35,19 +14,13 @@ figure.highlight,.codeblock
     color: #999999
     a
       float: right
-      color: #40759b
-      font-weight: bold
+      color: #01579f
   table
+    display: block
     width: 100%
-    margin: 0
-    padding-bottom: 10px
-    border-collapse: collapse
-    position: relative
-    display block 
-    overflow-x: auto
   pre,.gutter,.code,.tag
     background-color: inherit
-    font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
+    font-family: Menlo, Consolas, monospace
     border: none
     padding: 0
     margin: 0
@@ -64,46 +37,27 @@ figure.highlight,.codeblock
     .line
       color: #aaaaaa
   .line
+    height: 1.3em
     font-size: 13px
-    color: #333
-    &.marked
-      background: #f5e3de
-
   .code
     padding: 0.3em 15px 0.3em 1em
     width: 100%
-
+    pre
+      max-width: 700px
+      overflow-x: auto
+      overflow-y: hidden
 .gist .line,.gist .line-number
-  font-family: Source Code Pro, Monaco, Menlo, Consolas, monospace
+  font-family: Menlo, Consolas, monospace
   font-size: 1em
   margin: 0 0 5px 0
 /* code highlight color*/
 .highlight
+  .string
+    color: #183691
   .comment
-  .title
-    color: #888
-  .meta 
-  .tag
-    color: #324977
-  .attr
-    color: #118a04
-  .string,
-  .value,
-  .inheritance,
-  .header,
-  .ruby .symbol,
-  .xml .cdatabody
-    color:  #920000
-  .keyword,
-  .javascript .function
-    color: #ec25ec
-  .number,
-  .preprocessor,
-  .built_in,
-  .literal,
-  .params,
-  .constant
-    color: #fb6a00
+    color: #969896
+  .keyword
+    color: #a71d5d
   &.apacheconf
     .code
       .common,.nomarkup,.attribute,.variable,.cbracket,.keyword
@@ -318,6 +272,8 @@ figure.highlight,.codeblock
         color: #0086b3
       .attr
         color: #0086b3
+
+
   &.less
     .code
       .number,.hexcolor,.function,.attribute
@@ -369,8 +325,8 @@ figure.highlight,.codeblock
   &.yml
     .code
       .number
-        color: #fb6a00
+        color: #0086b3
       .line,.attr
-        color: #795da3
+        color: #63a35c
       .line,.string,.type,.literal,.meta
-        color: #920000
+        color: #183691

@@ -12,6 +12,11 @@ ol,ul,li
   list-style-type: none
 img,button
   border: none
+table,tr,th,td
+  border-spacing 0
+  cellspacing 0
+  cellpadding 0
+  padding 0
 form,input,select,option 
   outline none
 input:-webkit-autofill
@@ -46,6 +51,8 @@ blockquote,.stressed
   border-left: 5px solid #40759b
 strong, b, em
   font-weight: bold
+pre
+  margin: 2em 0
 .hidden1
   display: none 
   
@@ -412,6 +419,9 @@ body
     text-align: justify
     text-justify: distribute
     word-break: normal
+    pre
+      code
+        padding: 0 2em
     h2
       font-size: 18px        
     h3
@@ -465,12 +475,10 @@ body
       list-style-position:inside
       margin: 1em
       code
-        margin 0 5px
-        padding: 0 5px
-        font-family: Source Code Pro,Monaco,Menlo,Consolas,monospace
-        color: #4d4d4c
-        background: #eee
-        font-size: .95em
+        display: inline-block
+        margin: 0 5px
+        padding: 0px 5px
+        background: #f7f8f8
       ul
         margin: 0
       a 
@@ -917,31 +925,22 @@ body
     margin-left: 1em
     padding-left: 0
 /* table*/
-table,tbody,tr,th,td
-  border-collapse: collapse
-  box-sizing border-box
-  border-spacing 0
-  cellspacing 0
-  cellpadding 0
-  padding 0
-  margin 0
 table
   margin: auto auto 15px
   width: 100%
   background: transparent
-  overflow-x: auto
-  display: block
+  border-collapse: collapse
+  border-spacing: 0
+  text-align: left
   th
     font-weight: bold
     padding: 5px 10px
-    border: 1px solid #d8e2eb
-    border-bottom-width: 2px
+    border-bottom: 2px solid #909ba2
   tr
     &:nth-child(2n)
-      background: #f4fcff
+      background: #f7f8f8
   td
-    padding: 5px 10px
-    border 1px solid #d8e2eb
+    padding: 5px 10px 
 /* duoshuo style*/
 #ds-recent-comments
   li.ds-comment
